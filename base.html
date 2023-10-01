@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizer</title>
+    <link rel="stylesheet" href="base.css">
+   <style>
+    body{
+        background-color:#9cfbfb;
+       
+    }
+   </style>
+</head>
+<body>
+    <div class="contain">
+        <!--navbar -->
+        <nav class="navbar">
+            <ul >
+               <li><a href="base.html">HOME</a></li>
+                <li><a href="bstvisual.html">BST VISUALIZER</a></li>
+                <li><a href="graphvisual.html"> GRAPH VISUALIZER</a> </li>
+               
+            </ul>
+        </nav>
+        <div>
+           <img src="pngwing.com.png">
+        </div>
+        <div class="wrapper">
+            <div class="bubbles">
+    
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li> 
+            </ul>
+            </div>
+        </div>
+       <div >
+       <h1 class="midMainText rainDropAnim sequence">BSTBloom</h1>
+       </div>
+      
+    </div>
+    
+
+
+ <script type="module" src="main.js"></script> 
+ <script>
+    window.onload = function() {
+    animateSequence();
+    
+};
+
+function animateSequence() {
+    var a = document.getElementsByClassName('sequence');
+    for (var i = 0; i < a.length; i++) {
+        var one = a[i];
+        var letter = one.innerHTML;
+        letter = letter.trim();
+        var str = '';
+        var delay = 100;
+        for (l = 0; l < letter.length; l++) {
+            if (letter[l] != ' ') {
+                str += '<span style="animation-delay:' + delay + 'ms; -webkit-animation-delay:' + delay + '">' + letter[l] + '</span>';
+                delay += 150;
+            } else
+                str += letter[l];
+        }
+    one.innerHTML = str;
+    }
+}
+
+
+
+
+ </script>
+</body> 
+</html>

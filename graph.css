@@ -1,0 +1,123 @@
+
+
+.mainGraph{
+    margin-top: 200px;
+    display: flex;
+	
+	position: absolute;
+	
+   justify-content: center;
+    left: 25%;
+    flex-direction: column;  
+
+	z-index: 8;
+		
+		
+		
+}
+
+.node {
+	width: 30px;
+	height: 30px;
+	background-color:  rgb(35, 171, 198);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	color:white;
+	z-index: 1;
+}
+
+/* Positioning nodes */
+.node:nth-child(1) { top: 40px; left: 40px; }
+.node:nth-child(2) { top: 30px; left: 190px; }
+.node:nth-child(3) { top: -200px; left: 190px; }
+.node:nth-child(4) { top: -180px; left: 550px; }
+.node:nth-child(5) { top: -250px; left: 716px; }
+.node:nth-child(6) { top: -330px; left: 350px; }
+
+
+/* Styling for edges (lines connecting nodes) */
+.edge {
+	position: absolute;
+	background-color: #05090c;
+	width: 3px;
+	border: 1px solid rgb(163, 245, 55);
+	z-index: -1; /* To position behind nodes */
+}
+
+/* Positioning edges */
+
+
+.edge:nth-child(3) { top: 268px; left: 601px; height: 22%; transform: rotate(180deg); }
+/* .edge:nth-child(4) { top: 387px; left: 520px; height: 114px; transform: rotate(299deg); } */
+
+
+
+
+	.mainGraph li {
+       
+		position: absolute;
+		list-style: none;
+		display: block;
+		width: 40px;
+		height: 40px;
+        border: 1px solid black;
+        background-image: linear-gradient(rgb(151, 229, 250), rgb(35, 171, 198));
+		/* bottom: -120px; */
+		  border-radius: 150px;
+		/* animation:square 50s infinite; */
+		transition-timing-function: linear;
+	
+    		&:nth-child(1){
+			left:7%;
+		}
+		
+		&:nth-child(2){
+			left: 20%;
+			bottom:3%;
+			
+		}
+		
+		&:nth-child(3){
+            top:10%;
+			left: 20%;
+          
+		}
+		
+		&:nth-child(4){
+			left:79%;
+           
+			
+			
+		}
+		
+		&:nth-child(5){
+			left: 50%;
+		}
+		
+		&:nth-child(6){
+			left: 62%;
+			
+		}
+		
+		&:nth-child(7){
+			left: 32%;
+			
+			
+		}
+		
+	
+   
+	}
+
+
+  
+
+@keyframes square {
+  0%   { transform: translateY(0px); 
+		}
+  100% { transform: translateY(-900px) ; 
+		}
+}
